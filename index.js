@@ -5,7 +5,7 @@ import mongoose from "mongoose"; // for password encryption
 import cors from "cors"; // for cross-origin request
 import dotenv from "dotenv"; // for environment variables
 import multer from "multer"; // to upload file locally
-import helmet from "helmet"; // for request safety
+//import helmet from "helmet"; // for request safety
 import morgan from "morgan"; // for login
 import {register} from "./controllers/auth.js";
 import authRoutes from "./routes/auth.js";
@@ -27,8 +27,8 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(helmet());
-app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
+//app.use(helmet());
+//app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
 app.use(morgan("common"));
 app.use(bodyParser.json({
     unit: "30 mb",
